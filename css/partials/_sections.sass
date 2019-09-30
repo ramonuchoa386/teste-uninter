@@ -1,11 +1,71 @@
 section
   width: 90%
   margin: 0 5%
+  & > p, & > div p
+    text-align: justify
   +breakpoint($desktop)
-    +flex(space-between, null, null, wrap)
+    +flex(null, null, column)
+    height: 100%
     margin-top: 20px
     margin-bottom: 20px
     & > *
       width: 45%
+    &.alinhamentoDireita
+      align-items: flex-end
+    &.alinhamentoAbaixo
+      justify-content: flex-end
+      padding-bottom: 100px
+    &.alinhamentoCentro
+      align-items: center
+      justify-content: center
   b
     color: $cor01
+
+section[data-slide="01"]
+  +breakpoint($desktop)
+    position: relative
+    &:before
+      content: ''
+      display: block
+      height: calc(100% - 100px)
+      width: 50%
+      background-size: cover
+      background-image: url(../imgs/distribuicao-fisica.jpg)
+      position: absolute
+      top: 0
+      left: 0
+  h2
+    color: $cor02 !important
+
+section[data-slide="04"]
+  +breakpoint($desktop)
+    flex-direction: row
+    align-items: center
+    p
+      text-align-last: end
+    figure
+      +flex(center, center, column)
+      background-color: lighten($cor02, 50%)
+      margin: 20px
+      padding: 20px
+      color: $cor01
+      font-style: italic
+      font-weight: bolder
+      font-size: .8rem
+      text-transform: uppercase
+      height: 100%
+
+section[data-slide="05"]
+  +breakpoint($desktop)
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    padding-top: 100px
+    div
+      width: 45%
+
+section[data-slide="06"]
+  +breakpoint($desktop)
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between

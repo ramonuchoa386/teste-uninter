@@ -1,26 +1,51 @@
 div.sliderWrapper
   +flex(space-between, center)
   +breakpoint($desktop)
-    width: 400px
+    width: 50%
     margin: 0 auto
   ul.slider
     order: 2
+    +breakpoint($desktop)
+      +flex(space-between, center)
+      width: 100%
+      margin-top: 100px
     li.slide
       display: none
       text-align: center
+      +breakpoint($desktop)
+        width: 30%
+        display: block
+        &:not(:last-of-type)
+          position: relative
+          &:after
+            content: '>'
+            position: absolute
+            top: 25%
+            right: -15%
       img
         width: 80px
         height: auto
+        +breakpoint($desktop)
+          height: 120px
+          width: auto
       p
         text-transform: uppercase
         font-size: .8rem
         font-weight: bolder
         margin-top: 10px
+        +breakpoint($desktop)
+          font-size: 1rem
+          text-align: center
   button
     padding: 4px 5px 5px
     border: none
     background-color: $cor01
     color: white
     outline: none
+    +breakpoint($desktop)
+      display: none
     &[name=slidePosterior]
       order: 3
+
+li.slide.mostrar
+  display: block !important

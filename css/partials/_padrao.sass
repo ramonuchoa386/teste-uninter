@@ -3,6 +3,14 @@
   padding: 0
   font-family: 'Montserrat', sans-serif
   box-sizing: border-box
+  &::-moz-selection
+    color: white
+  &::selection
+    color: white
+  &::-moz-selection
+    background: $cor01
+  &::selection
+    background: $cor01
 
 body
   +flex(space-between, center, column)

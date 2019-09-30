@@ -13,10 +13,10 @@ function mostrarSlide(slide) {
   };
 
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+      slides[i].classList.remove("mostrar");
   };
 
-  slides[totalSlides-1].style.display = "block";
+  slides[totalSlides-1].classList.add("mostrar");
 }
 
 mostrarSlide(totalSlides);
