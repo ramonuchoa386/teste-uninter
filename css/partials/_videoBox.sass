@@ -1,8 +1,8 @@
-.caixaVideo
+div.caixaVideo
   display: none
   position: fixed
   z-index: 10
-  padding-top: 100px
+  padding-top: 25vh
   left: 0
   top: 0
   width: 100%
@@ -10,22 +10,20 @@
   overflow: auto
   background-color: rgb(0,0,0)
   background-color: rgba(0,0,0,0.4)
-
-.caixa
-  background-color: #fefefe
-  margin: auto
-  padding: 20px
-  border: 1px solid #888
-  width: 80%
-
-.fechar
-  color: #aaaaaa
-  float: right
-  font-size: 28px
-  font-weight: bold
-
-.fechar:hover,
-.fechar:focus
-  color: #000
-  text-decoration: none
-  cursor: pointer
+  div.caixa
+    background-color: #fefefe
+    margin: auto
+    padding: 20px
+    border: 1px solid #888
+    width: 80%
+    span.fechar
+      color: #aaaaaa
+      float: right
+      font-size: 28px
+      font-weight: bold
+      &:hover, &:focus
+        color: #000
+        text-decoration: none
+        cursor: pointer
+    iframe
+      width: 100%
