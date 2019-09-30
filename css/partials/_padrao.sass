@@ -1,0 +1,37 @@
+*
+  margin: 0
+  padding: 0
+  font-family: 'Montserrat', sans-serif
+  box-sizing: border-box
+
+body
+  +flex(space-between, center, column)
+  width: 100vw
+  height: 100vh
+  background-color: #e0eafc
+  background-image: -webkit-linear-gradient(to right, #cfdff3, #e0eafc)
+  background-image: linear-gradient(to right, #cfdff3, #e0eafc)
+  overflow: hidden
+  counter-reset: topicos
+  font-size: 16px
+  +breakpoint($desktop)
+    font-size: 24px
+
+h1, h2, h3, p
+  letter-spacing: 1px
+  color: $escuro
+
+h2
+  margin-bottom: 45px
+
+a
+  text-decoration: none
+
+section
+  h3, p, img
+    margin-bottom: 20px
+
+img
+  max-width: 100%
+  +breakpoint($desktop)
+    max-width: 50%

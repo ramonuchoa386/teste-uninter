@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap')
+
+@import 'partials/variables'
+@import 'partials/mixins'
+@import 'partials/padrao'
+@import 'partials/header'
+@import 'partials/main'
+@import 'partials/videoBox'
+@import 'partials/sections'
+@import 'partials/slider'
+@import 'partials/footer'
+
+div.saibaMais
+  text-align: center
+  width: 80%
+  margin: 30px auto
+  border-radius: 3px
+  border: 1px solid $cor01
+  position: relative
+  padding: 5%
+  background-color: white
+  box-shadow: 5px 5px 20px rgba($cor01, .2)
+  +breakpoint($desktop)
+    width: 400px
+    margin: 0 auto
+    padding: 30px
+  h3
+    color: $cor01
+  a
+    padding: 5px 25px
+    text-transform: uppercase
+    font-weight: bolder
+    font-size: .8rem
+    color: white
+    background-color: $cor01
+    border-radius: 30px
+  video
+    position: absolute
+    display: none
+
+p.citacao
+  font-size: 1.2rem
+  font-weight: lighter
+  position: relative
+  text-align: center
+  +breakpoint($desktop)
+    width: 80%
+    margin: 0 auto
+  &:before, &:after
+    content: ''
+    width: 80%
+    height: 1px
+    background-color: $escuro
+    display: block
+    margin: 20px auto
+    position: relative
+
+div.destaque
+  width: 100%
+  background-color: $escuro
+  margin: 0
+  padding: 2vh 5%
+  text-align: center
+  +breakpoint($desktop)
+    width: 45%
+  p
+    color: white
+  ul.topicos
+    list-style-type: none
+    li
+      background-color: lighten($cor01, 50%)
+      border-radius: 5px
+      padding: 15px
+      text-align: center
+      &:not(:first-of-type)
+        margin-top: 30px
+      &:before
+        counter-increment: topicos
+        content: "0"counter(topicos)"."
+        font-size: 2rem
+        font-weight: bolder
+      p
+        margin: 0
+        color: $escuro
